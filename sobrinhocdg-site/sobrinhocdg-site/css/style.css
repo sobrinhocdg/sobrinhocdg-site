@@ -1,0 +1,86 @@
+:root {
+    --bg: #0a0a0a;
+    --text: #ffffff;
+    --accent: #ff0000;
+    --card: #1a1a1a;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(45deg, #000, var(--accent));
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.grid-musicas, .grid-videos, .grid-projetos, .grid-lore {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: scale(1.02);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    border-top: 2px solid var(--accent);
+}
+
+iframe {
+    border-radius: 10px;
+}
