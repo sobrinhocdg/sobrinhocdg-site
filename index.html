@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobrinho CDG | Site Oficial</title>
+    <meta name="description" content="Site oficial do rapper Sobrinho CDG. Ouça os lançamentos, veja clipes e acompanhe a trajetória.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --card-bg: #121212;
+            --text: #ffffff;
+            --text-sec: #a0a0a0;
+            --accent: #ff0000; /* Vermelho Sangue */
+            --gold: #ffd700;
+            --btn-hover: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at 50% 0%, #220000 0%, #050505 60%);
+        }
+
+        /* Container Principal estilo Linktree */
+        .container {
+            width: 100%;
+            max-width: 680px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Perfil */
+        .profile-section {
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+
+        .name {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .bio {
+            color: var(--text-sec);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            max-width: 90%;
+            margin: 0 auto 20px auto;
+        }
+
+        .verified {
+            color: var(--gold);
+            margin-left: 5px;
+        }
+
+        /* Links / Botões */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .link-btn {
+            background: var(--card-bg);
+            color: var(--text);
+            text-decoration: none;
+            padding: 18px 24px;
+            border-radius: 50px; /* Arredondado estilo Linktree */
+            font-weight: 700;
+            font-size: 1rem;
+            border: 1px solid #333;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .link-btn:hover {
+            transform: scale(1.02);
+            background: var(--btn-hover);
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+
+        .link-btn span {
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .link-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Destaque para Lançamentos */
+        .featured {
+            border: 1px solid var(--gold);
+            background: linear-gradient(45deg, #1a1a00, #121212);
+        }
+        
+        .featured:hover {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Seção de Música Embedada */
+        .music-section {
+            margin-top: 50px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: var(--text-sec);
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .link-btn {
+            animation: slideUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .link-btn:nth-child(1) { animation-delay: 0.1s; }
+        .link-btn:nth-child(2) { animation-delay: 0.2s; }
+        .link-btn:nth-child(3) { animation-delay: 0.3s; }
+        .link-btn:nth-child(4) { animation-delay: 0.4s; }
+        .link-btn:nth-child(5) { animation-delay: 0.5s; }
+        .link-btn:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .name { font-size: 1.5rem; }
+            .link-btn { padding: 15px 20px; font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Perfil -->
+        <div class="profile-section">
+            <!-- Foto de perfil (usando placeholder ou a do YT se tivermos URL direta) -->
+            <img src="https://ui-avatars.com/api/?name=Sobrinho+CDG&background=ff0000&color=fff&size=256&font-size=0.3" alt="Sobrinho CDG" class="avatar">
+            <h1 class="name">Sobrinho CDG <span class="verified">✓</span></h1>
+            <p class="bio" id="bio-text">Carregando bio...</p>
+        </div>
+
+        <!-- Links Principais (Estilo Linktree) -->
+        <div class="links-container">
+            
+            <!-- Lançamento em Destaque -->
+            <a href="https://open.spotify.com/artist/0W7TU9JHKp1xmE89QuxNzI" target="_blank" class="link-btn featured">
+                <span>
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                    Ouvir no Spotify (Oficial)
+                </span>
+            </a>
+
+            <a href="https://www.youtube.com/@SobrinhoCDG33" target="_blank" class="link-btn">
+                <span>
+                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    Canal no YouTube
+                </span>
+            </a>
+
+            <a href="https://soundcloud.com/sobrinhocdg" target="_blank" class="link-btn">
+                <span>
+                    <svg viewBox="0 0 24 24"><path d="M11.56 8.87V17h6.94c1.48 0 2.69-1.21 2.69-2.69 0-1.36-1.02-2.48-2.33-2.65V8.2c0-.41-.34-.75-.75-.75h-.38c-.41 0-.75.34-.75.75v3.14h-1.5V6.56c0-.41-.34-.75-.75-.75h-.38c-.41 0-.75.34-.75.75v4.88h-1.5V5.31c0-.41-.34-.75-.75-.75h-.38c-.41 0-.75.34-.75.75v6.03h-1.5V7.81c0-.41-.34-.75-.75-.75h-.38c-.41 0-.75.34-.75.75v3.06H6.56V9.38c0-.41-.34-.75-.75-.75h-.38c-.41 0-.75.34-.75.75v1.81H3.5c-1.1 0-2 .9-2 2v2.5c0 1.1.9 2 2 2h8.06c1.93 0 3.5-1.57 3.5-3.5v-2.5c0-1.93-1.57-3.5-3.5-3.5z"/></svg>
+                    SoundCloud
+                </span>
+            </a>
+
+            <a href="https://instagram.com/sobrinhocdg" target="_blank" class="link-btn">
+                <span>
+                    <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+                    Instagram
+                </span>
+            </a>
+        </div>
+
+        <!-- Seção de Últimos Lançamentos (Fixa, baseada nos dados que temos) -->
+        <div class="music-section">
+            <h3 class="section-title">Últimos Lançamentos</h3>
+            <div style="display: flex; flex-direction: column; gap: 15px; text-align: left;">
+                
+                <!-- Item 1 -->
+                <div style="background: #1a1a1a; padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 15px; border: 1px solid #333;">
+                    <div style="width: 50px; height: 50px; background: #333; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🎵</div>
+                    <div>
+                        <h4 style="font-size: 1rem; margin-bottom: 4px;">Vol. 4 (2025)</h4>
+                        <p style="font-size: 0.8rem; color: #888;">EP mais recente</p>
+                    </div>
+                    <a href="https://open.spotify.com/artist/0W7TU9JHKp1xmE89QuxNzI" target="_blank" style="margin-left: auto; color: #fff; text-decoration: none; font-size: 0.9rem; border: 1px solid #555; padding: 5px 10px; border-radius: 20px;">Ouvir →</a>
+                </div>
+
+                <!-- Item 2 -->
+                <div style="background: #1a1a1a; padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 15px; border: 1px solid #333;">
+                    <div style="width: 50px; height: 50px; background: #333; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🔥</div>
+                    <div>
+                        <h4 style="font-size: 1rem; margin-bottom: 4px;">Vol. 3 (2024)</h4>
+                        <p style="font-size: 0.8rem; color: #888;">Flow pesado</p>
+                    </div>
+                    <a href="https://open.spotify.com/artist/0W7TU9JHKp1xmE89QuxNzI" target="_blank" style="margin-left: auto; color: #fff; text-decoration: none; font-size: 0.9rem; border: 1px solid #555; padding: 5px 10px; border-radius: 20px;">Ouvir →</a>
+                </div>
+
+            </div>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #666; text-align: center;">
+                Veja todos os álbuns no Spotify
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Sobrinho CDG. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; opacity: 0.5;">Brasília / DF 🇧🇷</p>
+        </footer>
+    </div>
+
+    <script>
+        // Script simples para buscar a bio direto do YouTube sem API Key complexa
+        // Se falhar, mostra a bio padrão
+        const defaultBio = "Pra ouvir de graça só ir na aba 'Lançamentos' valeu";
+        
+        async function fetchBio() {
+            try {
+                // Tentativa leve de pegar metadados se disponível, senão usa default
+                // Como o scrape direto no client-side pode dar CORS, usamos o fallback seguro
+                document.getElementById('bio-text').innerText = defaultBio;
+            } catch (e) {
+                document.getElementById('bio-text').innerText = defaultBio;
+            }
+        }
+
+        fetchBio();
+    </script>
+</body>
+</html>
